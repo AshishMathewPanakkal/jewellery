@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miralia | Fine Jewellery Boutique</title>
+    <meta
+      name="description"
+      content="Discover timeless fine jewellery – engagement rings, necklaces, bracelets and earrings crafted to last a lifetime."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-mark">M</span>
+          <div class="brand-text">
+            <span class="brand-name">Miralia</span>
+            <span class="brand-tagline">Fine jewellery, thoughtfully crafted</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#collections">Collections</a>
+          <a href="#bestsellers">Bestsellers</a>
+          <a href="#about">About</a>
+          <a href="#care">Care</a>
+        </nav>
+        <button class="cart-button" id="cart-toggle" aria-label="Open cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-label">Cart</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">New • Winter 2026</p>
+            <h1>Jewellery that catches every light.</h1>
+            <p class="hero-text">
+              A curated collection of fine pieces in 14k and 18k gold, conflict-free diamonds, and lustrous
+              pearls. Designed to be worn, loved, and passed on.
+            </p>
+            <div class="hero-actions">
+              <a href="#bestsellers" class="btn btn-primary">Shop bestsellers</a>
+              <a href="#collections" class="btn btn-ghost">Explore collections</a>
+            </div>
+            <div class="hero-badges">
+              <span>✓ conflict-free stones</span>
+              <span>✓ free resizing on rings</span>
+              <span>✓ 30-day returns</span>
+            </div>
+          </div>
+          <div class="hero-media">
+            <div class="hero-card main-card">
+              <img
+                src="https://images.pexels.com/photos/2662677/pexels-photo-2662677.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Gold rings stacked together"
+              />
+              <div class="hero-card-info">
+                <p class="piece-name">Aurora Stacking Rings</p>
+                <p class="piece-meta">Set of 3 • 14k solid gold</p>
+              </div>
+            </div>
+            <div class="hero-grid">
+              <div class="hero-card small-card">
+                <img
+                  src="https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Diamond engagement ring"
+                />
+                <span class="badge">Engagement</span>
+              </div>
+              <div class="hero-card small-card">
+                <img
+                  src="https://images.pexels.com/photos/3373739/pexels-photo-3373739.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Pearl earrings"
+                />
+                <span class="badge">Everyday</span>
+              </div>
+              <div class="hero-note">
+                <p class="note-heading">Complimentary virtual styling</p>
+                <p class="note-copy">
+                  Unsure about size or style? Book a free 20-minute session with our stylists at checkout.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collections" class="collections">
+        <div class="container">
+          <header class="section-header">
+            <h2>Shop by collection</h2>
+            <p>Find the piece for every moment – engagements, milestones, or your everyday uniform.</p>
+          </header>
+          <div class="collection-grid">
+            <article class="collection-card">
+              <div class="collection-image">
+                <img
+                  src="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Engagement ring on hand"
+                />
+              </div>
+              <div class="collection-body">
+                <h3>Engagement</h3>
+                <p>Classic solitaires and modern halos with lab-grown and natural diamonds.</p>
+                <button class="link-button" data-collection="Engagement">View engagement rings →</button>
+              </div>
+            </article>
+
+            <article class="collection-card">
+              <div class="collection-image">
+                <img
+                  src="https://images.pexels.com/photos/3266700/pexels-photo-3266700.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Layered necklaces"
+                />
+              </div>
+              <div class="collection-body">
+                <h3>Everyday</h3>
+                <p>Light-catching necklaces, hoops, and bracelets that go with everything.</p>
+                <button class="link-button" data-collection="Everyday">View everyday pieces →</button>
+              </div>
+            </article>
+
+            <article class="collection-card">
+              <div class="collection-image">
+                <img
+                  src="https://images.pexels.com/photos/3641046/pexels-photo-3641046.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Pearl jewellery"
+                />
+              </div>
+              <div class="collection-body">
+                <h3>Occasion</h3>
+                <p>Statement earrings and necklaces for weddings, events, and everything in between.</p>
+                <button class="link-button" data-collection="Occasion">View occasion pieces →</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="bestsellers" class="products">
+        <div class="container">
+          <header class="section-header">
+            <h2>Bestsellers</h2>
+            <p>Customer favourites, restocked weekly in limited batches.</p>
+          </header>
+          <div class="product-toolbar">
+            <div class="filters">
+              <label>
+                Collection
+                <select id="filter-collection">
+                  <option value="all">All</option>
+                </select>
+              </label>
+              <label>
+                Metal
+                <select id="filter-metal">
+                  <option value="all">All</option>
+                  <option value="14k Yellow Gold">14k Yellow Gold</option>
+                  <option value="14k Rose Gold">14k Rose Gold</option>
+                  <option value="18k White Gold">18k White Gold</option>
+                  <option value="Sterling Silver">Sterling Silver</option>
+                </select>
+              </label>
+              <label>
+                Max price
+                <select id="filter-price">
+                  <option value="all">No limit</option>
+                  <option value="250">Up to ₹250</option>
+                  <option value="500">Up to ₹500</option>
+                  <option value="1000">Up to ₹1000</option>
+                </select>
+              </label>
+            </div>
+            <p class="product-count" id="product-count"></p>
+          </div>
+          <div id="product-grid" class="product-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container about-inner">
+          <div class="about-copy">
+            <h2>Designed for a lifetime of wear.</h2>
+            <p>
+              Miralia is a small studio crafting fine pieces in responsibly sourced materials. Every
+              ring, necklace, and bracelet passes through skilled hands – from CAD design to final polish.
+            </p>
+            <p>
+              Our diamonds are conflict-free and predominantly lab-grown to reduce environmental impact, and
+              all gold is certified recycled or fair-mined.
+            </p>
+            <ul class="about-list">
+              <li>• Free resizing on engagement rings within 60 days</li>
+              <li>• Lifetime cleaning & polishing in-store</li>
+              <li>• Complimentary gift packaging on every order</li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <h3>Visit our studio</h3>
+            <p>By appointment only in select cities.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="care" class="care">
+        <div class="container">
+          <header class="section-header">
+            <h2>Care & sizing</h2>
+            <p>Keep your pieces radiant for decades with simple at-home care.</p>
+          </header>
+          <div class="care-grid">
+            <article class="care-card">
+              <h3>Everyday care</h3>
+              <p>
+                Remove jewellery before intense workouts, swimming, or using cleaning products. Store pieces
+                separately in soft pouches to avoid scratches.
+              </p>
+            </article>
+            <article class="care-card">
+              <h3>Ring sizing</h3>
+              <p>
+                If you’re unsure of your size, order our complimentary ring sizer or book a virtual sizing
+                consultation before purchasing.
+              </p>
+            </article>
+            <article class="care-card">
+              <h3>Professional cleaning</h3>
+              <p>
+                We recommend professional cleaning every 12–18 months for diamond pieces. In-studio ultrasonic
+                cleaning is complimentary.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Miralia</p>
+          <p class="footer-text">Fine jewellery, made to be lived in.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">Our story</a>
+          <a href="#care">Care guide</a>
+          <a href="#">Shipping & returns</a>
+        </div>
+        <p class="footer-copy">© <span id="year"></span> Miralia. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Cart drawer -->
+    <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+      <div class="cart-overlay" id="cart-overlay"></div>
+      <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <header class="cart-header">
+          <h2 id="cart-title">Your jewellery cart</h2>
+          <button class="icon-button" id="cart-close" aria-label="Close cart">×</button>
+        </header>
+        <div class="cart-body">
+          <ul id="cart-items" class="cart-items"></ul>
+          <p class="cart-empty" id="cart-empty">Your cart is empty. Start with a bestseller you love.</p>
+        </div>
+        <footer class="cart-footer">
+          <div class="cart-summary">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">₹0</span>
+          </div>
+          <button class="btn btn-primary btn-full" id="checkout-button">Proceed to checkout</button>
+          <p class="cart-note">Secure checkout. Taxes and shipping calculated at the next step.</p>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
